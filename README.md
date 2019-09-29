@@ -1,11 +1,15 @@
 ## Docker Container for Jena-Fuseki
+Docker container build workflow for Jena-Fuseki forked from [blankdots](https://hub.docker.com/r/blankdots/jena-fuseki) configuration.
 
+
+## ----
+## Original Readme updated for Jena-Fuseki 3.13.0
 Current container is based on https://registry.hub.docker.com/u/stain/jena-fuseki/
 
 In order to make it more production friendly it adds:
 * gosu (running with limited permissions as non-root user) - https://github.com/tianon/gosu
 * configuration loader from file - and it provides two endpoints; one for test and one for working with
-* FUSEKI 3.12.0
+* FUSEKI 3.13.0
 
 ### Run image
 
