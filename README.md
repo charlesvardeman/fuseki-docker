@@ -2,7 +2,6 @@
 Docker container build workflow for Jena-Fuseki forked from [blankdots](https://hub.docker.com/r/blankdots/jena-fuseki) configuration.
 
 
-## ----
 ## Original Readme updated for Jena-Fuseki 3.13.0
 Current container is based on https://registry.hub.docker.com/u/stain/jena-fuseki/
 
