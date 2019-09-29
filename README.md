@@ -1,6 +1,24 @@
 ## Docker Container for Jena-Fuseki
 Docker container build workflow for Jena-Fuseki forked from [blankdots](https://hub.docker.com/r/blankdots/jena-fuseki) configuration.
 
+### SHACL service operation
+In Jena-Fuseki 3.13.0 SHACL validation has been added as an option for a service endpoint. [Instructions](https://jena.apache.org/documentation/shacl/) are available for configuring the endpoint in the Fuseki configuration file. The /ds endpoint is configured for SHACL validation.
+
+To upload data set fu:
+
+```
+curl -XPOST --data-binary @fu-data.ttl    \  
+     --header 'Content-type: text/turtle' \  
+     'http://localhost:3030/ds?default'
+```
+
+Validate with shapes in fu-shapes.ttl and get back a validation report:
+```
+curl -XPOST --data-binary @fu-shapes.ttl  \  
+     --header 'Content-type: text/turtle' \  
+     'http://localhost:3030/ds/shacl?graph-default'
+```
+
 
 ## Original Readme updated for Jena-Fuseki 3.13.0
 Current container is based on https://registry.hub.docker.com/u/stain/jena-fuseki/

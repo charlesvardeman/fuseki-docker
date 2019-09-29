@@ -59,6 +59,7 @@ tdb:GraphTDB    rdfs:subClassOf  ja:Model .
   fuseki:serviceReadWriteGraphStore "data" ;     # SPARQL Graph store protocol (read and write)
   # A separate read-only graph store endpoint:
   fuseki:serviceReadGraphStore      "get" ;      # SPARQL Graph store protocol (read only)
+  fuseki:endpoint [ fuseki:operation fuseki:shacl ; fuseki:name "shacl" ] ;
   fuseki:dataset                    <#dataset> ;
   .
 
